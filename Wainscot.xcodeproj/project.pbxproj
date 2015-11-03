@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000C737D1BE85503008A3456 /* WCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737C1BE85503008A3456 /* WCMath.m */; };
-		000C737F1BE85596008A3456 /* WCMathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737E1BE85596008A3456 /* WCMathSpec.m */; };
+		000C737D1BE85503008A3456 /* WCComputedMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737C1BE85503008A3456 /* WCComputedMeasurement.m */; };
+		000C737F1BE85596008A3456 /* WCComputedMeasurementSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */; };
 		00AC2F361BE8538B00C1277F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F351BE8538B00C1277F /* main.m */; };
 		00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F381BE8538B00C1277F /* AppDelegate.m */; };
 		00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F3B1BE8538B00C1277F /* ViewController.m */; };
@@ -38,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		000C737B1BE85503008A3456 /* WCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMath.h; sourceTree = "<group>"; };
-		000C737C1BE85503008A3456 /* WCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMath.m; sourceTree = "<group>"; };
-		000C737E1BE85596008A3456 /* WCMathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMathSpec.m; sourceTree = "<group>"; };
+		000C737B1BE85503008A3456 /* WCComputedMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCComputedMeasurement.h; sourceTree = "<group>"; };
+		000C737C1BE85503008A3456 /* WCComputedMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCComputedMeasurement.m; sourceTree = "<group>"; };
+		000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCComputedMeasurementSpec.m; sourceTree = "<group>"; };
 		00AC2F311BE8538B00C1277F /* Wainscot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wainscot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC2F351BE8538B00C1277F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00AC2F371BE8538B00C1277F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,8 +122,8 @@
 				00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */,
 				00AC2F451BE8538B00C1277F /* Info.plist */,
 				00AC2F341BE8538B00C1277F /* Supporting Files */,
-				000C737B1BE85503008A3456 /* WCMath.h */,
-				000C737C1BE85503008A3456 /* WCMath.m */,
+				000C737B1BE85503008A3456 /* WCComputedMeasurement.h */,
+				000C737C1BE85503008A3456 /* WCComputedMeasurement.m */,
 			);
 			path = Wainscot;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			children = (
 				00AC2F4E1BE8538B00C1277F /* WainscotTests.m */,
 				00AC2F501BE8538B00C1277F /* Info.plist */,
-				000C737E1BE85596008A3456 /* WCMathSpec.m */,
+				000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */,
 			);
 			path = WainscotTests;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */,
 				00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */,
 				00AC2F361BE8538B00C1277F /* main.m in Sources */,
-				000C737D1BE85503008A3456 /* WCMath.m in Sources */,
+				000C737D1BE85503008A3456 /* WCComputedMeasurement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				000C737F1BE85596008A3456 /* WCMathSpec.m in Sources */,
+				000C737F1BE85596008A3456 /* WCComputedMeasurementSpec.m in Sources */,
 				00AC2F4F1BE8538B00C1277F /* WainscotTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
