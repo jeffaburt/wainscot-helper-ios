@@ -9,6 +9,15 @@
 #import <Kiwi/Kiwi.h>
 #import "WCMath.h"
 
+@interface WCMath ()
+
++ (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
+                      leftPadding:(CGFloat)leftPadding
+                     rightPadding:(CGFloat)rightPadding
+                    numberOfPosts:(NSInteger)numberOfPosts;
+
+@end
+
 SPEC_BEGIN(WCMathSpec)
 
 void (^valueEquals)(CGFloat, CGFloat) = ^(CGFloat value, CGFloat expectedValue) {

@@ -17,11 +17,6 @@ typedef struct WCComputedMeasurements WCComputedMeasurements;
 
 @interface WCMath : NSObject
 
-+ (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
-                      leftPadding:(CGFloat)leftPadding
-                     rightPadding:(CGFloat)rightPadding
-                    numberOfPosts:(NSInteger)numberOfPosts;
-
 + (WCComputedMeasurements)computedMeasurementsForTotalLength:(CGFloat)totalLength
                                                  leftPadding:(CGFloat)leftPadding
                                                 rightPadding:(CGFloat)rightPadding;

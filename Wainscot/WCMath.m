@@ -13,23 +13,6 @@ static CGFloat const kWCMaxSpacing = 40.0f;
 
 @implementation WCMath
 
-+ (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
-                      leftPadding:(CGFloat)leftPadding
-                     rightPadding:(CGFloat)rightPadding
-                    numberOfPosts:(NSInteger)numberOfPosts {
-    CGFloat spacing = 0;
-    
-    if (totalLength > 0) {
-        spacing = (totalLength - leftPadding - rightPadding - numberOfPosts * kWCPostWidth) / (numberOfPosts + 1);
-    }
-    
-    if (spacing < 0) {
-        spacing = 0;
-    }
-    
-    return spacing;
-}
-
 + (WCComputedMeasurements)computedMeasurementsForTotalLength:(CGFloat)totalLength
                                                  leftPadding:(CGFloat)leftPadding
                                                 rightPadding:(CGFloat)rightPadding {
@@ -52,6 +35,25 @@ static CGFloat const kWCMaxSpacing = 40.0f;
     }
     
     return (WCComputedMeasurements){spacing, numberOfPosts};
+}
+
+#pragma mark - Internal
+
++ (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
+                      leftPadding:(CGFloat)leftPadding
+                     rightPadding:(CGFloat)rightPadding
+                    numberOfPosts:(NSInteger)numberOfPosts {
+    CGFloat spacing = 0;
+    
+    if (totalLength > 0) {
+        spacing = (totalLength - leftPadding - rightPadding - numberOfPosts * kWCPostWidth) / (numberOfPosts + 1);
+    }
+    
+    if (spacing < 0) {
+        spacing = 0;
+    }
+    
+    return spacing;
 }
 
 @end
