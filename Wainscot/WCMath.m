@@ -8,6 +8,8 @@
 
 #import "WCMath.h"
 
+CGFloat const kWCPostWidth = 3.5f;
+
 @implementation WCMath
 
 + (CGFloat)spacingWithTotalLength:(CGFloat)totalLength

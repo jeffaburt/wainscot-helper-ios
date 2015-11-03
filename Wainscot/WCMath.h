@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+extern CGFloat const kWCPostWidth;
+
 @interface WCMath : NSObject
 
 + (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
