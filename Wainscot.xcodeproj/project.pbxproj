@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C737D1BE85503008A3456 /* WCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737C1BE85503008A3456 /* WCMath.m */; };
+		000C737F1BE85596008A3456 /* WCMathSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737E1BE85596008A3456 /* WCMathSpec.m */; };
 		00AC2F361BE8538B00C1277F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F351BE8538B00C1277F /* main.m */; };
 		00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F381BE8538B00C1277F /* AppDelegate.m */; };
 		00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F3B1BE8538B00C1277F /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		00AC2F441BE8538B00C1277F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */; };
 		00AC2F4F1BE8538B00C1277F /* WainscotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F4E1BE8538B00C1277F /* WainscotTests.m */; };
 		00AC2F5A1BE8538B00C1277F /* WainscotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F591BE8538B00C1277F /* WainscotUITests.m */; };
+		237ED2C9F540608FF75841E5 /* libPods-WainscotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2980BB7649F79588211057B /* libPods-WainscotTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		000C737B1BE85503008A3456 /* WCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMath.h; sourceTree = "<group>"; };
+		000C737C1BE85503008A3456 /* WCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMath.m; sourceTree = "<group>"; };
+		000C737E1BE85596008A3456 /* WCMathSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMathSpec.m; sourceTree = "<group>"; };
 		00AC2F311BE8538B00C1277F /* Wainscot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wainscot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC2F351BE8538B00C1277F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00AC2F371BE8538B00C1277F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,9 @@
 		00AC2F551BE8538B00C1277F /* WainscotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WainscotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC2F591BE8538B00C1277F /* WainscotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WainscotUITests.m; sourceTree = "<group>"; };
 		00AC2F5B1BE8538B00C1277F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D0DBB8EEE5C946770C161D /* Pods-WainscotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.release.xcconfig"; sourceTree = "<group>"; };
+		6EC576DDFD95C9E91AE322D4 /* Pods-WainscotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2980BB7649F79588211057B /* libPods-WainscotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WainscotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237ED2C9F540608FF75841E5 /* libPods-WainscotTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,8 @@
 				00AC2F4D1BE8538B00C1277F /* WainscotTests */,
 				00AC2F581BE8538B00C1277F /* WainscotUITests */,
 				00AC2F321BE8538B00C1277F /* Products */,
+				ED81F1A2EDE779796E172BE0 /* Pods */,
+				930C59093D86BD806709D7C4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +122,8 @@
 				00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */,
 				00AC2F451BE8538B00C1277F /* Info.plist */,
 				00AC2F341BE8538B00C1277F /* Supporting Files */,
+				000C737B1BE85503008A3456 /* WCMath.h */,
+				000C737C1BE85503008A3456 /* WCMath.m */,
 			);
 			path = Wainscot;
 			sourceTree = "<group>";
@@ -127,6 +141,7 @@
 			children = (
 				00AC2F4E1BE8538B00C1277F /* WainscotTests.m */,
 				00AC2F501BE8538B00C1277F /* Info.plist */,
+				000C737E1BE85596008A3456 /* WCMathSpec.m */,
 			);
 			path = WainscotTests;
 			sourceTree = "<group>";
@@ -138,6 +153,23 @@
 				00AC2F5B1BE8538B00C1277F /* Info.plist */,
 			);
 			path = WainscotUITests;
+			sourceTree = "<group>";
+		};
+		930C59093D86BD806709D7C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2980BB7649F79588211057B /* libPods-WainscotTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED81F1A2EDE779796E172BE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EC576DDFD95C9E91AE322D4 /* Pods-WainscotTests.debug.xcconfig */,
+				29D0DBB8EEE5C946770C161D /* Pods-WainscotTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00AC2F611BE8538B00C1277F /* Build configuration list for PBXNativeTarget "WainscotTests" */;
 			buildPhases = (
+				B6A97E957FA1DA4092E95BDC /* Check Pods Manifest.lock */,
 				00AC2F461BE8538B00C1277F /* Sources */,
 				00AC2F471BE8538B00C1277F /* Frameworks */,
 				00AC2F481BE8538B00C1277F /* Resources */,
+				005FC0D77E8BD4A38362941C /* Copy Pods Resources */,
+				4B2216EC077EE05EA92D1BA2 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +300,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		005FC0D77E8BD4A38362941C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B2216EC077EE05EA92D1BA2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A97E957FA1DA4092E95BDC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00AC2F2D1BE8538B00C1277F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,6 +356,7 @@
 				00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */,
 				00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */,
 				00AC2F361BE8538B00C1277F /* main.m in Sources */,
+				000C737D1BE85503008A3456 /* WCMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000C737F1BE85596008A3456 /* WCMathSpec.m in Sources */,
 				00AC2F4F1BE8538B00C1277F /* WainscotTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +516,7 @@
 		};
 		00AC2F621BE8538B00C1277F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC576DDFD95C9E91AE322D4 /* Pods-WainscotTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WainscotTests/Info.plist;
@@ -443,6 +529,7 @@
 		};
 		00AC2F631BE8538B00C1277F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29D0DBB8EEE5C946770C161D /* Pods-WainscotTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WainscotTests/Info.plist;
@@ -496,6 +583,7 @@
 				00AC2F601BE8538B00C1277F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00AC2F611BE8538B00C1277F /* Build configuration list for PBXNativeTarget "WainscotTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +592,7 @@
 				00AC2F631BE8538B00C1277F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		00AC2F641BE8538B00C1277F /* Build configuration list for PBXNativeTarget "WainscotUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +601,7 @@
 				00AC2F661BE8538B00C1277F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
