@@ -70,6 +70,16 @@ describe(@"WCMath", ^{
             valueEquals(spacing, 55.26f);
         });
         
+        it(@"never returns negative spacing", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:10.0f
+                               leftPadding:5.0f
+                               rightPadding:5.0f
+                               numberOfPosts:1];
+            
+            valueEquals(spacing, 0);
+        });
+        
     });
     
 });

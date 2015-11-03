@@ -22,6 +22,10 @@ static CGFloat const kWCPostWidth = 3.5f;
         spacing = (totalLength - leftPadding - rightPadding - numberOfPosts * kWCPostWidth) / (numberOfPosts + 1);
     }
     
+    if (spacing < 0) {
+        spacing = 0;
+    }
+    
     return spacing;
 }
 
