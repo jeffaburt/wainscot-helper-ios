@@ -11,180 +11,63 @@
 
 SPEC_BEGIN(WCMathSpec)
 
-void (^spacingShouldBe)(CGFloat, CGFloat, CGFloat, CGFloat, CGFloat) =
-^(CGFloat expectedSpacing,
-  CGFloat totalLength,
-  CGFloat leftPadding,
-  CGFloat rightPadding,
-  CGFloat numberOfPosts) {
-    CGFloat spacing = [WCMath
-                       spacingWithTotalLength:totalLength
-                       leftPadding:leftPadding
-                       rightPadding:rightPadding
-                       numberOfPosts:numberOfPosts];
-    
-    [[theValue(spacing) should] equal:theValue(expectedSpacing)];
+void (^valueEquals)(CGFloat, CGFloat) = ^(CGFloat value, CGFloat expectedValue) {
+    // Need to account for limited precision floating points.
+    [[theValue(fabs(value - expectedValue)) should] beLessThan:theValue(0.00001f)];
 };
 
 describe(@"WCMath", ^{
     
     describe(@"#spacingWithTotalLength:leftPadding:rightPadding:numberOfPosts:", ^{
-        __block CGFloat totalLength;
-        __block CGFloat leftPadding;
-        __block CGFloat rightPadding;
-        __block CGFloat numberOfPosts;
         
-        // Any time total length is 0, we should always return 0.
-        context(@"total length is 0", ^{
-            
-            beforeEach(^{
-                totalLength = 0;
-            });
-            
-            context(@"there are 0 posts", ^{
-                
-                beforeEach(^{
-                    numberOfPosts = 0;
-                });
-                
-                context(@"left padding is 0", ^{
-                    
-                    beforeEach(^{
-                        leftPadding = 0;
-                    });
-                    
-                    context(@"right padding is 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 0;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                    context(@"right padding is not 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 67.9998f;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                });
-                
-                context(@"left padding is not 0", ^{
-                    
-                    beforeEach(^{
-                        leftPadding = 80983.02f;
-                    });
-                    
-                    context(@"right padding is 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 0;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                    context(@"right padding is not 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 2;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                });
-                
-            });
+        it(@"returns 0 when total length is 0", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:0
+                               leftPadding:10.0f
+                               rightPadding:18.0f
+                               numberOfPosts:12];
 
-            context(@"there is at least 1 post", ^{
-                
-                beforeEach(^{
-                    numberOfPosts = 1;
-                });
-                
-                context(@"left padding is 0", ^{
-                    
-                    beforeEach(^{
-                        leftPadding = 0;
-                    });
-                    
-                    context(@"right padding is 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 0;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                    context(@"right padding is not 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 67.9998f;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                });
-                
-                context(@"left padding is not 0", ^{
-                    
-                    beforeEach(^{
-                        leftPadding = 80983.02f;
-                    });
-                    
-                    context(@"right padding is 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 0;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                    context(@"right padding is not 0", ^{
-                        
-                        beforeEach(^{
-                            rightPadding = 2;
-                        });
-                        
-                        it(@"returns 0", ^{
-                            spacingShouldBe(0, totalLength, leftPadding, rightPadding, numberOfPosts);
-                        });
-                        
-                    });
-                    
-                });
-                
-            });
+            valueEquals(spacing, 0);
+        });
+        
+        it(@"returns the total length when everything else is 0", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:187.22f
+                               leftPadding:0
+                               rightPadding:0
+                               numberOfPosts:0];
             
+            valueEquals(spacing, 187.22f);
+        });
+        
+        it(@"subtracts the left and right padding from the total length", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:166.0f
+                               leftPadding:8.0f
+                               rightPadding:2.2f
+                               numberOfPosts:0];
+            
+            valueEquals(spacing, 155.8f);
+        });
+        
+        it(@"subtracts the post widths and divides by the number of posts + 1", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:100.0f
+                               leftPadding:0
+                               rightPadding:0
+                               numberOfPosts:2];
+            
+            valueEquals(spacing, 31.0f);
+        });
+        
+        it(@"subtracts the left and right padding from the total length, subtracts the post widths and divides by the number of posts + 1", ^{
+            CGFloat spacing = [WCMath
+                               spacingWithTotalLength:193.0f
+                               leftPadding:12.22f
+                               rightPadding:8.0f
+                               numberOfPosts:2];
+            
+            valueEquals(spacing, 55.26f);
         });
         
     });

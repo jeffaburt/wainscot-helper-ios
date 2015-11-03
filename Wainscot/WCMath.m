@@ -16,7 +16,13 @@ CGFloat const kWCPostWidth = 3.5f;
                       leftPadding:(CGFloat)leftPadding
                      rightPadding:(CGFloat)rightPadding
                     numberOfPosts:(NSInteger)numberOfPosts {
-    return 0;
+    CGFloat spacing = 0;
+    
+    if (totalLength > 0) {
+        spacing = (totalLength - leftPadding - rightPadding - numberOfPosts * kWCPostWidth) / (numberOfPosts + 1);
+    }
+    
+    return spacing;
 }
 
 @end
