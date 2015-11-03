@@ -82,6 +82,60 @@ describe(@"WCMath", ^{
         
     });
     
+    describe(@"#computedMeasurementsForTotalLength:leftPadding:rightPadding:", ^{
+        
+        it(@"returns 0 spacing and 0 number of posts when total length is 0", ^{
+            WCComputedMeasurements computedMeasurements =
+            [WCMath computedMeasurementsForTotalLength:0
+                                           leftPadding:16.0f
+                                          rightPadding:4.0f];
+            
+            valueEquals(computedMeasurements.spacing, 0);
+            [[theValue(computedMeasurements.numberOfPosts) should] beZero];
+        });
+        
+        it(@"returns 0 spacing and 0 number of posts when adjusted length is 0", ^{
+            WCComputedMeasurements computedMeasurements =
+            [WCMath computedMeasurementsForTotalLength:10.0f
+                                           leftPadding:5.0f
+                                          rightPadding:5.0f];
+            
+            valueEquals(computedMeasurements.spacing, 0);
+            [[theValue(computedMeasurements.numberOfPosts) should] beZero];
+        });
+        
+        it(@"adjusts the number of posts so the spacing is no more than 40", ^{
+            WCComputedMeasurements computedMeasurements =
+            [WCMath computedMeasurementsForTotalLength:220.0f
+                                           leftPadding:16.0f
+                                          rightPadding:4.0f];
+            
+            valueEquals(computedMeasurements.spacing, 37.2);
+            [[theValue(computedMeasurements.numberOfPosts) should] equal:theValue(4)];
+        });
+        
+        it(@"returns 0 posts if the adjusted length is less than 41", ^{
+            WCComputedMeasurements computedMeasurements =
+            [WCMath computedMeasurementsForTotalLength:49.0f
+                                           leftPadding:9.0f
+                                          rightPadding:10.0f];
+            
+            valueEquals(computedMeasurements.spacing, 30.0f);
+            [[theValue(computedMeasurements.numberOfPosts) should] beZero];
+        });
+        
+        it(@"returns 1 post if the adjusted length is 41 (too long)", ^{
+            WCComputedMeasurements computedMeasurements =
+            [WCMath computedMeasurementsForTotalLength:50.0f
+                                           leftPadding:5.0f
+                                          rightPadding:4.0f];
+            
+            valueEquals(computedMeasurements.spacing, 18.75);
+            [[theValue(computedMeasurements.numberOfPosts) should] equal:theValue(1)];
+        });
+        
+    });
+    
 });
 
 SPEC_END

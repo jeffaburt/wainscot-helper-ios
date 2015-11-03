@@ -30,4 +30,28 @@ static CGFloat const kWCMaxSpacing = 40.0f;
     return spacing;
 }
 
++ (WCComputedMeasurements)computedMeasurementsForTotalLength:(CGFloat)totalLength
+                                                 leftPadding:(CGFloat)leftPadding
+                                                rightPadding:(CGFloat)rightPadding {
+    NSInteger numberOfPosts = -1;
+    CGFloat spacing = 0;
+    
+    do {
+        numberOfPosts++;
+        
+        spacing = [self spacingWithTotalLength:totalLength
+                                   leftPadding:leftPadding
+                                  rightPadding:rightPadding
+                                 numberOfPosts:numberOfPosts];
+    }
+    while (spacing > kWCMaxSpacing);
+    
+    // Spacing should always be positiveNo spacing == no posts
+    if (spacing == 0) {
+        numberOfPosts = 0;
+    }
+    
+    return (WCComputedMeasurements){spacing, numberOfPosts};
+}
+
 @end

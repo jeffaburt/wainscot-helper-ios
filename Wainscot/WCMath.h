@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+struct WCComputedMeasurements {
+    CGFloat spacing;
+    NSInteger numberOfPosts;
+};
+typedef struct WCComputedMeasurements WCComputedMeasurements;
 
 @interface WCMath : NSObject
 
@@ -16,5 +21,9 @@
                       leftPadding:(CGFloat)leftPadding
                      rightPadding:(CGFloat)rightPadding
                     numberOfPosts:(NSInteger)numberOfPosts;
+
++ (WCComputedMeasurements)computedMeasurementsForTotalLength:(CGFloat)totalLength
+                                                 leftPadding:(CGFloat)leftPadding
+                                                rightPadding:(CGFloat)rightPadding;
 
 @end
