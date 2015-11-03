@@ -11,7 +11,8 @@
 
 @interface WCMath : NSObject
 
-+ (CGFloat)spacingWithLeftPadding:(CGFloat)leftPadding
++ (CGFloat)spacingWithTotalLength:(CGFloat)totalLength
+                      leftPadding:(CGFloat)leftPadding
                      rightPadding:(CGFloat)rightPadding
                     numberOfPosts:(NSInteger)numberOfPosts;
 
