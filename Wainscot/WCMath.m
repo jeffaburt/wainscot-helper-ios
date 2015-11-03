@@ -9,6 +9,7 @@
 #import "WCMath.h"
 
 static CGFloat const kWCPostWidth = 3.5f;
+static CGFloat const kWCMaxSpacing = 40.0f;
 
 @implementation WCMath
 
