@@ -217,6 +217,7 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="f1k-xK-fGH" firstAttribute="height" secondItem="31k-7D-wj6" secondAttribute="height" id="0Yc-ue-CkM"/>
                             <constraint firstItem="BXw-Of-9nR" firstAttribute="width" secondItem="31k-7D-wj6" secondAttribute="width" id="0kc-BC-3qx"/>
@@ -281,6 +282,9 @@
                                 <exclude reference="rWS-fk-kd2"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Re8-Qg-fJc" appends="YES" id="QZX-Sf-4sL"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -295,6 +299,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Re8-Qg-fJc">
+                    <connections>
+                        <action selector="didTapView:" destination="BYZ-38-t0r" id="Qf2-6x-Y37"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="285" y="371"/>
         </scene>

@@ -11,6 +11,7 @@
 #import "WCComputedMeasurement.h"
 #import "WCFraction.h"
 #import "NSString+WCUnits.h"
+#import "UIApplication+SCResignFirstResponder.h"
 
 static CGFloat const kWCSegmentedControlOptionValueZero = 3.5f;
 static CGFloat const kWCSegmentedControlOptionValueOne = 4.125f;
@@ -87,8 +88,15 @@ replacementString:(NSString *)string {
     return NO;
 }
 
+#pragma mark - IBAction
+
 - (IBAction)segmentedControlValueDidChange:(UISegmentedControl *)segmentedControl {
+    [UIApplication WC_resignFirstResponder];
     [self refreshData];
+}
+
+- (IBAction)didTapView:(UIView *)view {
+    [UIApplication WC_resignFirstResponder];
 }
 
 #pragma mark - Internal
