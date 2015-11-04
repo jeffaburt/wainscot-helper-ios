@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" id="RcG-73-eK6"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tni-Ic-ojW" userLabel="Numerator Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tni-Ic-ojW" userLabel="Numerator Text Field">
                                 <rect key="frame" x="211" y="50" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.92876157407407411" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="height" constant="2" id="G92-kG-nDE"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7np-Xi-cjy" userLabel="Denominator Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="7np-Xi-cjy" userLabel="Denominator Text Field">
                                 <rect key="frame" x="211" y="90" width="60" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.92876157407407411" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,7 +201,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="133" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="haX-0T-Zzf" userLabel="Whole Number Text Field">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="133" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="haX-0T-Zzf" userLabel="Whole Number Text Field">
                                 <rect key="frame" x="143" y="50" width="60" height="70"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.92876157407407411" alpha="1" colorSpace="calibratedWhite"/>
