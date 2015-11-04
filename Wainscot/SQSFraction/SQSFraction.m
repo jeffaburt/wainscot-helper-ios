@@ -246,7 +246,12 @@ static NSString * const kCodingKeyIsNegative = @"SQSIsNegative";
         {
             NSUInteger numer = [self numerator];
             NSUInteger denom = [self denominator];
-            if (numer < denom) {
+            
+            // Don't return "0/1" if the numerator is 0.
+            if (numer == 0) {
+                return [NSString stringWithFormat:@"%ld", (long)numer];
+            }
+            else if (numer < denom) {
                 // Just a normal fraction (no whole part)
                 return [self stringValueWithStyle:SQSFractionStringStyleInline];
             }

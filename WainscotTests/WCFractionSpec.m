@@ -39,6 +39,10 @@ describe(@"WCFraction", ^{
             [[[WCFraction fractionStringFromFloatValue:3.5f] should] equal:@"3 1/2"];
         });
         
+        it(@"returns 0 when 0", ^{
+            [[[WCFraction fractionStringFromFloatValue:0] should] equal:@"0"];
+        });
+        
     });
     
 });
