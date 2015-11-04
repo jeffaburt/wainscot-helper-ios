@@ -119,7 +119,7 @@ replacementString:(NSString *)string {
     return
     self.wholeNumberTextField.text.doubleValue +
     self.numeratorTextField.text.doubleValue /
-    self.denominatorTextField.text.doubleValue;
+    (self.denominatorTextField.text.doubleValue ?: 1.0f);
 }
 
 @end
