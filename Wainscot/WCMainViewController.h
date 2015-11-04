@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WCMainViewController.h
 //  Wainscot
 //
 //  Created by Jeffrey Burt on 11/2/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WCMainViewController : UIViewController
 
 
 @end

@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  WCMainViewController.m
 //  Wainscot
 //
 //  Created by Jeffrey Burt on 11/2/15.
 //  Copyright © 2015 Jeffrey Burt. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WCMainViewController.h"
 
-@interface ViewController ()
+@interface WCMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation WCMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
