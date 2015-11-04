@@ -23,6 +23,7 @@
 		00AC2F5A1BE8538B00C1277F /* WainscotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F591BE8538B00C1277F /* WainscotUITests.m */; };
 		00E4B7BC1BE9AC3A00C0EAA7 /* WCPencilMarkCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B7BB1BE9AC3A00C0EAA7 /* WCPencilMarkCollectionViewCell.m */; };
 		00E4B7BF1BE9B5AD00C0EAA7 /* NSString+WCUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */; };
+		00E4B7C21BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B7C11BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.m */; };
 		237ED2C9F540608FF75841E5 /* libPods-WainscotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2980BB7649F79588211057B /* libPods-WainscotTests.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,8 @@
 		00E4B7BB1BE9AC3A00C0EAA7 /* WCPencilMarkCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCPencilMarkCollectionViewCell.m; sourceTree = "<group>"; };
 		00E4B7BD1BE9B5AD00C0EAA7 /* NSString+WCUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WCUnits.h"; sourceTree = "<group>"; };
 		00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WCUnits.m"; sourceTree = "<group>"; };
+		00E4B7C01BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+SCResignFirstResponder.h"; sourceTree = "<group>"; };
+		00E4B7C11BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+SCResignFirstResponder.m"; sourceTree = "<group>"; };
 		29D0DBB8EEE5C946770C161D /* Pods-WainscotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EC576DDFD95C9E91AE322D4 /* Pods-WainscotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2980BB7649F79588211057B /* libPods-WainscotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WainscotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 				00E4B7BB1BE9AC3A00C0EAA7 /* WCPencilMarkCollectionViewCell.m */,
 				00E4B7BD1BE9B5AD00C0EAA7 /* NSString+WCUnits.h */,
 				00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */,
+				00E4B7C01BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.h */,
+				00E4B7C11BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.m */,
 				00AC2F3D1BE8538B00C1277F /* Main.storyboard */,
 				00AC2F401BE8538B00C1277F /* Assets.xcassets */,
 				00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */,
@@ -397,6 +402,7 @@
 				00E4B7BC1BE9AC3A00C0EAA7 /* WCPencilMarkCollectionViewCell.m in Sources */,
 				001618D51BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m in Sources */,
 				001618DC1BE9A13C00D120CF /* WCFraction.m in Sources */,
+				00E4B7C21BE9C37200C0EAA7 /* UIApplication+SCResignFirstResponder.m in Sources */,
 				000C737D1BE85503008A3456 /* WCComputedMeasurement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
