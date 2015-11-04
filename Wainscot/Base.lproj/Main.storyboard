@@ -43,6 +43,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ag1-8R-xCm"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpG-kY-0iT" userLabel="Fraction Line View">
                                 <rect key="frame" x="211" y="84" width="60" height="2"/>
@@ -58,6 +61,9 @@
                                 <color key="backgroundColor" white="0.92876157407407411" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F1f-YT-4R5"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31k-7D-wj6" userLabel="Spacer View 1">
                                 <rect key="frame" x="0.0" y="150.5" width="52.5" height="0.0"/>
