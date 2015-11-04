@@ -369,8 +369,8 @@ static NSString * const kCodingKeyIsNegative = @"SQSIsNegative";
         [aCoder encodeBool:[self isNegative] forKey:kCodingKeyIsNegative];
     }
     else {
-        [aCoder encodeObject:[NSNumber numberWithUnsignedInt:[self numerator]]];
-        [aCoder encodeObject:[NSNumber numberWithUnsignedInt:[self denominator]]];
+        [aCoder encodeObject:[NSNumber numberWithUnsignedInteger:[self numerator]]];
+        [aCoder encodeObject:[NSNumber numberWithUnsignedInteger:[self denominator]]];
         [aCoder encodeObject:[NSNumber numberWithBool:[self isNegative]]];
     }
 }
