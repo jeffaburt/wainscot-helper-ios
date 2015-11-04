@@ -18,7 +18,9 @@ static CGFloat const kWCSegmentedControlOptionValueOne = 4.125f;
 @interface WCMainViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet UITextField *totalLengthTextField;
+@property (weak, nonatomic) IBOutlet UITextField *wholeNumberTextField;
+@property (weak, nonatomic) IBOutlet UITextField *numeratorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *denominatorTextField;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *leftPostWidthSegmentedControl;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *rightPostWidthSegmentedControl;
 @property (weak, nonatomic) IBOutlet UILabel *innerSpacingLabel;
@@ -42,7 +44,7 @@ static CGFloat const kWCSegmentedControlOptionValueOne = 4.125f;
     if (!_computedMeasurement) {
         _computedMeasurement =
         [WCComputedMeasurement
-         computedMeasurementForTotalLength:self.totalLengthTextField.text.floatValue
+         computedMeasurementForTotalLength:self.totalLength
          leftPadding:[self selectedPaddingForSegmentedControl:self.leftPostWidthSegmentedControl]
          rightPadding:[self selectedPaddingForSegmentedControl:self.rightPostWidthSegmentedControl]];
     }
@@ -107,6 +109,17 @@ replacementString:(NSString *)string {
     segmentedControl.selectedSegmentIndex == 0 ?
     kWCSegmentedControlOptionValueZero :
     kWCSegmentedControlOptionValueOne;
+}
+
+/** 
+ Returns the total length, assembled from '_wholeNumberTextField', 
+ '_numeratorTextField' and '_denominatorTextField'. 
+ */
+- (CGFloat)totalLength {
+    return
+    self.wholeNumberTextField.text.doubleValue +
+    self.numeratorTextField.text.doubleValue /
+    self.denominatorTextField.text.doubleValue;
 }
 
 @end
