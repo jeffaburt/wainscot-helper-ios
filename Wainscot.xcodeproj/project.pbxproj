@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		000C737D1BE85503008A3456 /* WCComputedMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737C1BE85503008A3456 /* WCComputedMeasurement.m */; };
 		000C737F1BE85596008A3456 /* WCComputedMeasurementSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */; };
+		001618D51BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 001618D11BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m */; };
+		001618D61BE99DAB00D120CF /* SQSFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 001618D41BE99DAB00D120CF /* SQSFraction.m */; };
+		001618D91BE99DCE00D120CF /* WCFractionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 001618D81BE99DCE00D120CF /* WCFractionSpec.m */; };
+		001618DC1BE9A13C00D120CF /* WCFraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 001618DB1BE9A13C00D120CF /* WCFraction.m */; };
 		00AC2F361BE8538B00C1277F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F351BE8538B00C1277F /* main.m */; };
 		00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F381BE8538B00C1277F /* AppDelegate.m */; };
 		00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F3B1BE8538B00C1277F /* ViewController.m */; };
@@ -41,6 +45,13 @@
 		000C737B1BE85503008A3456 /* WCComputedMeasurement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCComputedMeasurement.h; sourceTree = "<group>"; };
 		000C737C1BE85503008A3456 /* WCComputedMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCComputedMeasurement.m; sourceTree = "<group>"; };
 		000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCComputedMeasurementSpec.m; sourceTree = "<group>"; };
+		001618D01BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+SQSFraction.h"; sourceTree = "<group>"; };
+		001618D11BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+SQSFraction.m"; sourceTree = "<group>"; };
+		001618D31BE99DAB00D120CF /* SQSFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSFraction.h; sourceTree = "<group>"; };
+		001618D41BE99DAB00D120CF /* SQSFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSFraction.m; sourceTree = "<group>"; };
+		001618D81BE99DCE00D120CF /* WCFractionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFractionSpec.m; sourceTree = "<group>"; };
+		001618DA1BE9A13C00D120CF /* WCFraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCFraction.h; sourceTree = "<group>"; };
+		001618DB1BE9A13C00D120CF /* WCFraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCFraction.m; sourceTree = "<group>"; };
 		00AC2F311BE8538B00C1277F /* Wainscot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wainscot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC2F351BE8538B00C1277F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00AC2F371BE8538B00C1277F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +99,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001618CF1BE99DAB00D120CF /* SQSFraction */ = {
+			isa = PBXGroup;
+			children = (
+				001618D01BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.h */,
+				001618D11BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m */,
+				001618D31BE99DAB00D120CF /* SQSFraction.h */,
+				001618D41BE99DAB00D120CF /* SQSFraction.m */,
+			);
+			path = SQSFraction;
+			sourceTree = "<group>";
+		};
 		00AC2F281BE8538B00C1277F = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 		00AC2F331BE8538B00C1277F /* Wainscot */ = {
 			isa = PBXGroup;
 			children = (
+				001618CF1BE99DAB00D120CF /* SQSFraction */,
 				00AC2F371BE8538B00C1277F /* AppDelegate.h */,
 				00AC2F381BE8538B00C1277F /* AppDelegate.m */,
 				00AC2F3A1BE8538B00C1277F /* ViewController.h */,
@@ -124,6 +147,8 @@
 				00AC2F341BE8538B00C1277F /* Supporting Files */,
 				000C737B1BE85503008A3456 /* WCComputedMeasurement.h */,
 				000C737C1BE85503008A3456 /* WCComputedMeasurement.m */,
+				001618DA1BE9A13C00D120CF /* WCFraction.h */,
+				001618DB1BE9A13C00D120CF /* WCFraction.m */,
 			);
 			path = Wainscot;
 			sourceTree = "<group>";
@@ -142,6 +167,7 @@
 				00AC2F4E1BE8538B00C1277F /* WainscotTests.m */,
 				00AC2F501BE8538B00C1277F /* Info.plist */,
 				000C737E1BE85596008A3456 /* WCComputedMeasurementSpec.m */,
+				001618D81BE99DCE00D120CF /* WCFractionSpec.m */,
 			);
 			path = WainscotTests;
 			sourceTree = "<group>";
@@ -356,6 +382,9 @@
 				00AC2F3C1BE8538B00C1277F /* ViewController.m in Sources */,
 				00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */,
 				00AC2F361BE8538B00C1277F /* main.m in Sources */,
+				001618D61BE99DAB00D120CF /* SQSFraction.m in Sources */,
+				001618D51BE99DAB00D120CF /* NSDecimalNumber+SQSFraction.m in Sources */,
+				001618DC1BE9A13C00D120CF /* WCFraction.m in Sources */,
 				000C737D1BE85503008A3456 /* WCComputedMeasurement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				000C737F1BE85596008A3456 /* WCComputedMeasurementSpec.m in Sources */,
+				001618D91BE99DCE00D120CF /* WCFractionSpec.m in Sources */,
 				00AC2F4F1BE8538B00C1277F /* WainscotTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
