@@ -105,7 +105,7 @@
 
 - (NSArray *)continuedFractionValueWithAcceptableError:(double)error
 {
-    NSAssert1(error > 0, @"Error must be greater than zero, got %@", error);
+    NSAssert1(error > 0, @"Error must be greater than zero, got %f", error);
     NSAssert1([self compare:[NSDecimalNumber zero]] != NSOrderedAscending, @"Decimal number must not be negative, got %@", self);
     return [self _continuedFractionByExtendingPreviousContinuedFraction:nil
                                                             withResidue:nil
