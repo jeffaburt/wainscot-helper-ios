@@ -77,6 +77,10 @@ static CGFloat const kWCSegmentedControlOptionValueOne = 4.125f;
 
 #pragma mark - UITextFieldDelegate
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [textField performSelector:@selector(selectAll:) withObject:nil afterDelay:0.0];
+}
+
 - (BOOL)textField:(UITextField *)textField
 shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {
