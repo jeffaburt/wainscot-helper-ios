@@ -21,6 +21,7 @@
 		00AC2F441BE8538B00C1277F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */; };
 		00AC2F4F1BE8538B00C1277F /* WainscotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F4E1BE8538B00C1277F /* WainscotTests.m */; };
 		00AC2F5A1BE8538B00C1277F /* WainscotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AC2F591BE8538B00C1277F /* WainscotUITests.m */; };
+		00E4B7BF1BE9B5AD00C0EAA7 /* NSString+WCUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */; };
 		237ED2C9F540608FF75841E5 /* libPods-WainscotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2980BB7649F79588211057B /* libPods-WainscotTests.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		00AC2F551BE8538B00C1277F /* WainscotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WainscotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AC2F591BE8538B00C1277F /* WainscotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WainscotUITests.m; sourceTree = "<group>"; };
 		00AC2F5B1BE8538B00C1277F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E4B7BD1BE9B5AD00C0EAA7 /* NSString+WCUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WCUnits.h"; sourceTree = "<group>"; };
+		00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WCUnits.m"; sourceTree = "<group>"; };
 		29D0DBB8EEE5C946770C161D /* Pods-WainscotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6EC576DDFD95C9E91AE322D4 /* Pods-WainscotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WainscotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WainscotTests/Pods-WainscotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2980BB7649F79588211057B /* libPods-WainscotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WainscotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +143,8 @@
 				00AC2F381BE8538B00C1277F /* AppDelegate.m */,
 				00AC2F3A1BE8538B00C1277F /* WCMainViewController.h */,
 				00AC2F3B1BE8538B00C1277F /* WCMainViewController.m */,
+				00E4B7BD1BE9B5AD00C0EAA7 /* NSString+WCUnits.h */,
+				00E4B7BE1BE9B5AD00C0EAA7 /* NSString+WCUnits.m */,
 				00AC2F3D1BE8538B00C1277F /* Main.storyboard */,
 				00AC2F401BE8538B00C1277F /* Assets.xcassets */,
 				00AC2F421BE8538B00C1277F /* LaunchScreen.storyboard */,
@@ -380,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00AC2F3C1BE8538B00C1277F /* WCMainViewController.m in Sources */,
+				00E4B7BF1BE9B5AD00C0EAA7 /* NSString+WCUnits.m in Sources */,
 				00AC2F391BE8538B00C1277F /* AppDelegate.m in Sources */,
 				00AC2F361BE8538B00C1277F /* main.m in Sources */,
 				001618D61BE99DAB00D120CF /* SQSFraction.m in Sources */,
