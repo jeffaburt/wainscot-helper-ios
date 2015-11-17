@@ -20,7 +20,7 @@ SPEC_BEGIN(WCFractionSpec)
 
 describe(@"WCFraction", ^{
     
-    describe(@"#fractionWithDecimalNumber:acceptableError:", ^{
+    describe(@"#fractionStringFromFloatValue:shouldRound:", ^{
         __block BOOL shouldRound;
         
         context(@"not rounded", ^{
@@ -53,7 +53,7 @@ describe(@"WCFraction", ^{
         
     });
     
-    describe(@"#fractionWithDecimalNumber:acceptableError:", ^{
+    describe(@"#fractionStringFromFloatValue:", ^{
         
         it(@"returns 4 1/8 when 4.125", ^{
             [[[WCFraction fractionStringFromFloatValue:4.125f] should] equal:@"4 1/8"];
