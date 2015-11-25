@@ -101,8 +101,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"returns 0 spacing and 0 number of posts when total length is 0", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:0
-                                          leftPadding:16.0f
-                                         rightPadding:4.0f];
+                                                         leftPadding:16.0f
+                                                        rightPadding:4.0f];
             
             valueEquals(computedMeasurement.spacing, 0);
             [[theValue(computedMeasurement.numberOfPosts) should] beZero];
@@ -111,8 +111,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"returns 0 spacing and 0 number of posts when adjusted length is 0", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:10.0f
-                                          leftPadding:5.0f
-                                         rightPadding:5.0f];
+                                                         leftPadding:5.0f
+                                                        rightPadding:5.0f];
             
             valueEquals(computedMeasurement.spacing, 0);
             [[theValue(computedMeasurement.numberOfPosts) should] beZero];
@@ -121,8 +121,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"adjusts the number of posts so the spacing is no more than 40", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:220.0f
-                                          leftPadding:16.0f
-                                         rightPadding:4.0f];
+                                                         leftPadding:16.0f
+                                                        rightPadding:4.0f];
             
             valueEquals(computedMeasurement.spacing, 37.2);
             [[theValue(computedMeasurement.numberOfPosts) should] equal:theValue(4)];
@@ -131,8 +131,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"returns 0 posts if the adjusted length is less than 41", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:49.0f
-                                          leftPadding:9.0f
-                                         rightPadding:10.0f];
+                                                         leftPadding:9.0f
+                                                        rightPadding:10.0f];
             
             valueEquals(computedMeasurement.spacing, 30.0f);
             [[theValue(computedMeasurement.numberOfPosts) should] beZero];
@@ -141,8 +141,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"returns 1 post if the adjusted length is 41 (too long)", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:50.0f
-                                          leftPadding:5.0f
-                                         rightPadding:4.0f];
+                                                         leftPadding:5.0f
+                                                        rightPadding:4.0f];
             
             valueEquals(computedMeasurement.spacing, 18.75);
             [[theValue(computedMeasurement.numberOfPosts) should] equal:theValue(1)];
@@ -151,8 +151,8 @@ describe(@"WCComputedMeasurement", ^{
         it(@"adjusts the number of posts and returns pencil marks", ^{
             WCComputedMeasurement *computedMeasurement =
             [WCComputedMeasurement computedMeasurementForTotalLength:176.625
-                                          leftPadding:3.5
-                                         rightPadding:4.125f];
+                                                         leftPadding:3.5
+                                                        rightPadding:4.125f];
             
             valueEquals(computedMeasurement.spacing, 39.625f);
             [[theValue(computedMeasurement.numberOfPosts) should] equal:theValue(3)];
@@ -177,18 +177,18 @@ describe(@"WCComputedMeasurement", ^{
         
         it(@"returns an empty array when spacing is 0", ^{
             NSArray *pencilMarks = [WCComputedMeasurement pencilMarksWithSpacing:0
-                                                    numberOfPosts:100
-                                                      leftPadding:18.0f
-                                                     rightPadding:987.0f];
+                                                                   numberOfPosts:100
+                                                                     leftPadding:18.0f
+                                                                    rightPadding:987.0f];
             
             [[pencilMarks should] haveCountOf:0];
         });
         
         it(@"starts and ends pencil marks at the outer boundaries", ^{
             NSArray *pencilMarks = [WCComputedMeasurement pencilMarksWithSpacing:100.0f
-                                                    numberOfPosts:0
-                                                      leftPadding:0
-                                                     rightPadding:0];
+                                                                   numberOfPosts:0
+                                                                     leftPadding:0
+                                                                    rightPadding:0];
             
             [[pencilMarks.firstObject should] equal:@(0)];
             [[pencilMarks.lastObject should] equal:@(100.0f)];
@@ -196,9 +196,9 @@ describe(@"WCComputedMeasurement", ^{
         
         it(@"respects left and right padding", ^{
             NSArray *pencilMarks = [WCComputedMeasurement pencilMarksWithSpacing:100.0f
-                                                    numberOfPosts:0
-                                                      leftPadding:3.5f
-                                                     rightPadding:4.125f];
+                                                                   numberOfPosts:0
+                                                                     leftPadding:3.5f
+                                                                    rightPadding:4.125f];
             
             [[pencilMarks[0] should] equal:@(0)];
             [[pencilMarks[1] should] equal:@(3.5f)];
@@ -208,9 +208,9 @@ describe(@"WCComputedMeasurement", ^{
         
         it(@"adds two pencil marks, 3.5\" apart, for each post", ^{
             NSArray *pencilMarks = [WCComputedMeasurement pencilMarksWithSpacing:100
-                                                    numberOfPosts:1
-                                                      leftPadding:0
-                                                     rightPadding:0];
+                                                                   numberOfPosts:1
+                                                                     leftPadding:0
+                                                                    rightPadding:0];
             
             [[pencilMarks[0] should] equal:@(0)];
             [[pencilMarks[1] should] equal:@(100)];
@@ -220,9 +220,9 @@ describe(@"WCComputedMeasurement", ^{
         
         it(@"respects left and right padding, and compensates for post widths", ^{
             NSArray *pencilMarks = [WCComputedMeasurement pencilMarksWithSpacing:31.0f
-                                                    numberOfPosts:4
-                                                      leftPadding:3.5
-                                                     rightPadding:4.125f];
+                                                                   numberOfPosts:4
+                                                                     leftPadding:3.5
+                                                                    rightPadding:4.125f];
             
             [[pencilMarks[0] should] equal:@(0)];
             [[pencilMarks[1] should] equal:@(3.5f)];
